@@ -1,0 +1,38 @@
+@charset "utf-8";
+/* CSS Document */
+
+body { background:url("IMÁGENES/fondo-rojo-moderno-hexagono_95742-209.jpg");
+	background-size: 100rem;	
+}
+
+.contenedor {width: 1000px;
+	margin: 0 auto;
+	background-color: #FFFFFF;
+}
+
+main {
+	width: 1000px;
+	background-color: #000000;
+}
+
+h2 {
+	font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", "sans-serif";
+	font-weight: 100;
+	font-size: 30px;
+	color: #A0253B;
+}
+
+h3 {
+	font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", "sans-serif";
+	font-weight: 60;
+	font-size: 20px;
+	color: #FFFFFF;
+}
+
+h1 {
+	font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", "sans-serif";
+	font-weight: 100;
+	font-size: 35px;
+	font-stretch: condensed;
+	color: #A0253B;
+}
