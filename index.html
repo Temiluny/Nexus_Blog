@@ -1,21 +1,522 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="utf-8">
+<meta charset="UTF-8">
 <title>NEXUS BLOG</title>
-	<link rel="stylesheet" href="style.css">
+	<link href="Style.css" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 </head>
 
-	<frameset rows="17%,*,10%" frameborder="0">
-		<frame name="banner" src="banner.html"></frame>	
-	<frameset cols="70%,30%" frameborder="0">
-	<frame name="columna1" src="columna1.html"> </frame>
-	<frame name="columna2" src="columna2.html"> </frame>
+<body text="#FFFFFF">
+	
+	
+	
+	<div class="contenedor">
 		
-	</frameset>
-		<frame name="banner" src="pie de página.html"></frame>
-	</frameset><noframes></noframes>
+		<header>
+			<br>
+			<table width="95%" height="10%" align="center">
+				<tr>
+				<td width="1%"></td>
+				<td>
+				<a href="index.html">
+			<img src="IMÁGENES/NEXUS LO MEJOR PARA TI 2.png" width="200px">
+				</a>
+				</td>
+				</tr>
+			</table>
+			<br>
+		</header>
+		
+		<style>
 
+            .slide {
+
+                position: relative;
+
+                box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+
+                margin-top: 26px;
+
+            }
+
+            .slide-inner {
+
+                position: relative;
+
+                overflow: hidden;
+
+                width: 100%;
+
+                height: calc( 100% + 3em);
+
+            }
+
+            .slide-open:checked + .slide-item {
+
+                position: static;
+
+                opacity: 100;
+
+            }
+
+            .slide-item {
+
+                position: absolute;
+
+                opacity: 0;
+
+                -webkit-transition: opacity 0.6s ease-out;
+
+                transition: opacity 0.6s ease-out;
+
+            }
+
+            .slide-item img {
+
+                display: block;
+
+                height: auto;
+
+                max-width: 100%;
+
+            }
+
+            .slide-control {
+
+                background: rgba(0, 0, 0, 0.28);
+
+                border-radius: 50%;
+
+                color: #fff;
+
+                cursor: pointer;
+
+                display: none;
+
+                font-size: 40px;
+
+                height: 40px;
+
+                line-height: 35px;
+
+                position: absolute;
+
+                top: 50%;
+
+                -webkit-transform: translate(0, -50%);
+
+                cursor: pointer;
+
+                -ms-transform: translate(0, -50%);
+
+                transform: translate(0, -50%);
+
+                text-align: center;
+
+                width: 40px;
+
+                z-index: 10;
+
+            }
+
+            .slide-control.prev {
+
+                left: 2%;
+
+            }
+
+            .slide-control.next {
+
+                right: 2%;
+
+            }
+
+            .slide-control:hover {
+
+                background: rgba(0, 0, 0, 0.8);
+
+                color: #aaaaaa;
+
+            }
+
+            #slide-1:checked ~ .control-1,
+
+            #slide-2:checked ~ .control-2,
+
+            #slide-3:checked ~ .control-3 {
+
+                display: block;
+
+            }
+
+            .slide-indicador {
+
+                list-style: none;
+
+                margin: 0;
+
+                padding: 0;
+
+                position: absolute;
+
+                bottom: 2%;
+
+                left: 0;
+
+                right: 0;
+
+                text-align: center;
+
+                z-index: 10;
+
+            }
+
+            .slide-indicador li {
+
+                display: inline-block;
+
+                margin: 0 5px;
+
+            }
+
+            .slide-circulo {
+
+                color: #828282;
+
+                cursor: pointer;
+
+                display: block;
+
+                font-size: 35px;
+
+            }
+
+            .slide-circulo:hover {
+
+                color: #aaaaaa;
+
+            }
+
+            #slide-1:checked ~ .control-1 ~ .slide-indicador 
+
+                 li:nth-child(1) .slide-circulo,
+
+            #slide-2:checked ~ .control-2 ~ .slide-indicador 
+
+                  li:nth-child(2) .slide-circulo,
+
+            #slide-3:checked ~ .control-3 ~ .slide-indicador 
+
+                  li:nth-child(3) .slide-circulo {
+
+                color: #931010;
+
+            }
+
+            #titulo {
+
+                width: 100%;
+
+                position: absolute;
+
+                padding: 0px;
+
+                margin: 0px auto;
+
+                text-align: center;
+
+                font-size: 27px;
+
+                color: rgba(255, 255, 255, 1);
+
+                font-family: 'Open Sans', sans-serif;
+
+                z-index: 9999;
+
+                text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), 
+
+                     -1px 0px 2px rgba(255, 255, 255, 0);
+
+            }
+
+        </style>
+
+    
+
+        <div class="slide">
+
+            <div class="slide-inner">
+
+                <input class="slide-open" type="radio" id="slide-1" 
+
+                      name="slide" aria-hidden="true" hidden="" checked="checked">
+
+                <div class="slide-item" align="center">
+
+                    <img src="IMÁGENES/BANNER JUEGO.png" width="70%">
+
+                </div>
+
+                <input class="slide-open" type="radio" id="slide-2" 
+
+                      name="slide" aria-hidden="true" hidden="">
+
+                <div class="slide-item" align="center">
+
+                    <img src="IMÁGENES/BANNER JUEGO 2.png" width="70%">
+
+                </div>
+
+                <input class="slide-open" type="radio" id="slide-3" 
+
+                      name="slide" aria-hidden="true" hidden="">
+
+                <div class="slide-item" align="center">
+
+                    <img src="IMÁGENES/BANNER JUEGO 3.png" width="70%">
+
+                </div>
+
+                <label for="slide-3" class="slide-control prev control-1">‹</label>
+
+                <label for="slide-2" class="slide-control next control-1">›</label>
+
+                <label for="slide-1" class="slide-control prev control-2">‹</label>
+
+                <label for="slide-3" class="slide-control next control-2">›</label>
+
+                <label for="slide-2" class="slide-control prev control-3">‹</label>
+
+                <label for="slide-1" class="slide-control next control-3">›</label>
+
+                <ol class="slide-indicador">
+
+                    <li>
+
+                        <label for="slide-1" class="slide-circulo">•</label>
+
+                    </li>
+
+                    <li>
+
+                        <label for="slide-2" class="slide-circulo">•</label>
+
+                    </li>
+
+                    <li>
+
+                        <label for="slide-3" class="slide-circulo">•</label>
+
+                    </li>
+
+                </ol>
+
+            </div>
+
+        </div>
+		
+		
+		<main>
+			<br><br>
+			<table width="80%" align="center">
+				<tr>
+				<td align="center">
+					<a href="pc.html">
+				<img src="IMÁGENES/Limpio.png" width="100%">
+					</a>
+				</td>
+				</tr>
+				<tr>
+				<td align="center">
+					<a href="pc.html">
+				<h2>¿CÓMO CUIDAR TU COMPUTADORA Y MANTENERLA FUERA DE PELIGRO?</h2>
+					</a>
+				</td>
+				</tr>
+				<tr>
+				<td align="justify">
+					Hoy queremos hablarte de algunas cosas que puedes hacer para proteger la seguridad de tu ordenador. Por desgracia suele ser bastante común que una conducta ingenua en Internet a veces acabe pasándonos factura en forma de virus o de algún tipo de problema o ataque informático que vulnere nuestra privacidad o elimine información. <a href="pc.html">Ver más</a>
+					
+					<br><br><br><br>
+				</td>
+					
+					
+					
+				<tr>
+				<td align="center">
+					<a href="cursos.html">
+				<img src="IMÁGENES/Deficit-de-atencion-1.png" width="100%">
+					</a>
+				</td>
+				</tr>
+				<tr>
+				<td align="center">
+					<a href="cursos.html">
+				<h2>¿POR QUÉ SON IMPORTANTES LOS CURSOS DE TECNOLOGÍA PARA NIÑOS?</h2>
+					</a>
+				</td>
+				</tr>
+				<tr>
+				<td align="justify">
+					Cuando usted le da a su hijo la oportunidad de aprender computación a través de cursos de computación para niños, no solo le está proporcionando un medio para desarrollar sus actividades escolares de un modo más eficiente: le está dando una herramienta para su futuro en el mundo laboral. Para ello, es posible recurrir a cursos de computación en Costa Rica y contratar los servicios de un profesor particular, pero antes de hacerlo, le presentamos un listado de razones para brindar esta herramienta a su hijo. <a href="cursos.html">Ver más</a>
+					
+					<br><br><br>
+				</td>
+				</tr>
+				</tr>
+			</table>
+		</main>
+		
+	</div>
 
 	
+<div class="contenedor2">
+		
+		<br>
+		
+		<table width="90%" height="5%" align="center">
+
+		<tr bgcolor="#A0253B">
+
+		
+
+		<td height="3%" width="50%" bgcolor="#000000" align="center">
+
+			<h2>Déjanos tus datos para estar al tanto de nuestras novedades</h2>
+
+		</td>
+			
+		</tr>
+			
+		</table>
+
+			<br>
+
+			<form>
+				
+				<table align="center" width="90%">
+					
+				<tr>
+				<td width="30%">
+
+				<textarea style="white-space: inherit; width: 98%; background-position: left" name="Observaciones" rows="1"> Nombres </textarea>
+					
+				</td>
+				<td width="30%">
+
+				<textarea style="white-space: inherit; width: 98%; background-position: left" name="Observaciones" rows="1"> Apellidos </textarea>
+					
+				</td>
+				<td width="30%">
+
+				<textarea style="white-space: inherit; width: 98%; background-position: left" name="Observaciones" rows="1"> Email </textarea>
+				
+				</td>	
+				
+				</tr>
+				</table>
+				
+			<table align="center" width="90%">
+				<tr>
+				
+				<td width="40%">
+
+				<textarea style="white-space: inherit; width: 98.5%; background-position: left" name="Observaciones" rows="1"> DNI </textarea>
+					
+				</td>
+				<td width="40%">	
+					
+				<textarea style="white-space: inherit; width: 98.5%; background-position: left" name="Observaciones" rows="1"> Celular </textarea>
+				</td>
+				</tr>
+			</table>
+					
+			<table align="center" width="90%">
+					
+				<tr>
+				<td>
+
+				<textarea style="white-space: inherit; width: 99.4%; background-position: left" name="Observaciones" rows="5"> Observaciones </textarea>
+					
+				</td>	
+				</tr>
+					
+			</table>
+
+
+			<br>
+
+			<table width="90%" align="center">
+
+				<tr>
+					<td width="50%" align="justify">
+					<input type="checkbox"> <font color="#FFFFFF"> Acepto haber leído la política de privacidad. </font>
+					</td>
+				
+
+					<td width="35%" align="right"><input type="submit" value="ENVIAR" class="miau" style="background-color: #000000; color:#FFFFFF; border-color: #1F1F1F; cursor: pointer"></td>
+					
+					<td width="5%"></td>
+
+					<td width="35%" align="left"><input type="reset" value="BORRAR" class="miau" style="background-color: #000000; color:#FFFFFF; border-color: #1F1F1F; cursor: pointer"></td>
+				</tr>
+			</table>
+			</form>
+		
+		<br><br>
+			</div>
+		
+	<div class="contenedor">
+	
+		<footer>
+		<br>
+			
+			<table width="100%" height="5%" align="center">
+
+		<tr></tr>
+
+		
+
+		<td width="3%"></td>
+
+		
+
+		<td height="5px" width="80%">
+
+	<a href="index.html">Blog NEXUS Virtual © 2022. Todos los derechos reservados.</a>
+
+		</td>
+
+		
+
+		<td height="5px" align="center" width="4%">
+
+			<img src="IMÁGENES/FACEBOOK.png" width="50%">
+
+		</td>
+
+		
+
+		<td height="5px" align="center" width="4%">
+
+			<img src="IMÁGENES/Recurso 3.png" width="50%">
+
+		</td>
+
+
+		<td height="5px" align="center" width="4%">
+
+			<img src="IMÁGENES/Recurso 4.png" width="50%">
+
+		</td>
+
+	</table>
+		<br>
+	</footer>
+		
+	</div>
+	
+	
+</body>
 </html>
